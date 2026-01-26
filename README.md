@@ -24,7 +24,7 @@ This project implements a skin lesion classifier with:
 ## Setup
 ```bash
 # Clone repository
-git clone <your-repo-url>
+git clone https://github.com/cesaraha/skin-cancer-uncertainty
 cd skin-cancer-uncertainty
 
 # Create environment
@@ -48,7 +48,7 @@ ISIC 2018 Challenge Dataset
 - Validation: ~1,500 images
 - Test: ~1,500 images (held out)
 
-Download instructions in `docs/dataset_setup.md` (to be created in Task 0.4.1)
+Download instructions in `docs/dataset_setup.md`
 
 ## Project Structure
 ```
