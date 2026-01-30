@@ -1,0 +1,211 @@
+# EU MDR Compliance Checklist for Skin Cancer Detection Project
+
+This checklist tracks regulatory compliance considerations throughout the project. Items are marked as we complete them.
+
+## Phase 0: Foundation & Setup
+
+### Intended Use Definition
+- [x] Define primary function: Binary classification (melanoma vs benign)
+- [x] Identify input: Dermoscopic images (ISIC 2018 dataset)
+- [x] Identify output: Class prediction + uncertainty estimate
+- [x] Define target users: Dermatologists (demonstration purposes)
+
+### Risk Management Planning
+- [x] Identify primary risks:
+  - False negative (missing melanoma) - HIGH RISK
+  - False positive (unnecessary biopsies) - MEDIUM RISK
+  - Overconfident incorrect predictions - HIGH RISK
+- [x] Plan risk mitigation:
+  - Uncertainty quantification
+  - Calibration
+  - Deferral mechanism for uncertain cases
+
+### Dataset Documentation
+- [ ] Document data source (Task 0.4.2) ⏳
+- [ ] Document preprocessing steps (Task 0.4.3) ⏳
+- [ ] Document class distribution (Task 0.4.4) ⏳
+- [ ] Document data splits (Phase 1) ⏳
+
+## Phase 1: Baseline Classifier
+
+### Model Architecture
+- [ ] Document model choice (EfficientNet-B0)
+- [ ] Document model parameters
+- [ ] Document pretrained weights source
+- [ ] Document training configuration
+
+### Training Process
+- [ ] Document training procedure
+- [ ] Document hyperparameters
+- [ ] Document data augmentation
+- [ ] Document class balancing strategy
+- [ ] Save training logs
+
+### Initial Evaluation
+- [ ] Calculate standard metrics (accuracy, AUROC, sensitivity, specificity)
+- [ ] Analyze confusion matrix
+- [ ] Identify error patterns
+- [ ] Check for bias across subgroups (if metadata available)
+
+### Calibration
+- [ ] Measure calibration before temperature scaling (ECE)
+- [ ] Apply temperature scaling
+- [ ] Measure calibration after temperature scaling
+- [ ] Document calibration improvement
+- [ ] Create reliability diagrams
+
+## Phase 2: Monte Carlo Dropout (Uncertainty Quantification)
+
+### Epistemic Uncertainty
+- [ ] Implement MC Dropout
+- [ ] Calculate uncertainty metrics (entropy, mutual information)
+- [ ] Analyze uncertainty on correct vs incorrect predictions
+- [ ] Optimize number of forward passes
+- [ ] Document uncertainty computation
+
+### Uncertainty Validation
+- [ ] Verify uncertainty is higher on errors
+- [ ] Test on out-of-distribution samples (if available)
+- [ ] Analyze uncertainty by confidence level
+- [ ] Create uncertainty visualizations
+
+### Combined Approach
+- [ ] Combine MC Dropout with temperature scaling
+- [ ] Verify calibration is maintained
+- [ ] Document combined method benefits
+
+## Phase 3: Deep Ensembles (Alternative Uncertainty)
+
+### Ensemble Implementation
+- [ ] Train multiple independent models
+- [ ] Implement ensemble aggregation
+- [ ] Calculate ensemble uncertainty
+- [ ] Compare with MC Dropout uncertainty
+
+### Ensemble Validation
+- [ ] Measure ensemble calibration
+- [ ] Analyze ensemble diversity
+- [ ] Compare computational costs
+- [ ] Choose final uncertainty method
+
+## Phase 5: Deferral Mechanism
+
+### Deferral Strategy
+- [ ] Define deferral threshold based on uncertainty
+- [ ] Simulate deferral on validation set
+- [ ] Measure accuracy on retained predictions
+- [ ] Measure coverage (% of cases retained)
+- [ ] Analyze deferred cases characteristics
+
+### Clinical Usability
+- [ ] Create user interface (Gradio)
+- [ ] Display prediction + confidence + uncertainty
+- [ ] Flag high-uncertainty cases for deferral
+- [ ] Provide clear explanations
+- [ ] Test interface usability
+
+## Phase 6: Final Evaluation & Documentation
+
+### Comprehensive Testing
+- [ ] Final evaluation on held-out test set
+- [ ] Measure all performance metrics
+- [ ] Measure calibration quality
+- [ ] Analyze errors and limitations
+- [ ] Document performance by subgroups
+
+### Robustness Testing
+- [ ] Test on different image qualities
+- [ ] Test on edge cases
+- [ ] Test deferral mechanism
+- [ ] Document failure modes
+
+### Documentation for Regulatory Review
+
+#### Device Description
+- [ ] Detailed description of software
+- [ ] Intended use statement
+- [ ] Contraindications and warnings
+- [ ] Technical specifications
+- [ ] Known limitations
+
+#### Risk Management File
+- [ ] Risk analysis document
+- [ ] Risk mitigation strategies
+- [ ] Residual risk assessment
+- [ ] Risk-benefit analysis
+
+#### Validation Results
+- [ ] Performance metrics report
+- [ ] Calibration analysis report
+- [ ] Uncertainty quantification report
+- [ ] Deferral mechanism evaluation
+- [ ] Error analysis report
+
+#### Clinical Evaluation
+- [ ] Literature review of similar devices
+- [ ] Performance comparison with state-of-the-art
+- [ ] Clinical benefits statement
+- [ ] Limitations acknowledgment
+
+#### Instructions for Use
+- [ ] System requirements
+- [ ] Installation instructions
+- [ ] Operating instructions
+- [ ] Interpretation guide
+- [ ] Troubleshooting guide
+
+#### Model Card
+- [ ] Model details
+- [ ] Intended use
+- [ ] Training data description
+- [ ] Performance metrics
+- [ ] Ethical considerations
+- [ ] Caveats and recommendations
+
+## Continuous Requirements
+
+### Version Control
+- [x] Git repository initialized
+- [ ] Tag releases for each phase
+- [ ] Document changes between versions
+- [ ] Maintain reproducibility
+
+### Quality Assurance
+- [ ] Code review practices
+- [ ] Testing procedures
+- [ ] Validation procedures
+- [ ] Documentation review
+
+### Ethical Considerations
+- [ ] Data privacy compliance
+- [ ] Bias analysis and mitigation
+- [ ] Fairness across demographics
+- [ ] Informed consent considerations (if real deployment)
+
+## Post-Project (Beyond Scope)
+
+### For Real Deployment
+- [ ] Clinical validation study design
+- [ ] Regulatory submission preparation
+- [ ] CE marking process
+- [ ] Post-market surveillance plan
+- [ ] Adverse event reporting system
+- [ ] Software updates and maintenance plan
+
+---
+
+## Progress Summary
+
+- **Phase 0**: 4/10 items complete (40%)
+- **Phase 1**: 0/15 items complete (0%)
+- **Phase 2**: 0/10 items complete (0%)
+- **Phase 3**: 0/8 items complete (0%)
+- **Phase 5**: 0/10 items complete (0%)
+- **Phase 6**: 0/20 items complete (0%)
+
+**Total Progress**: 4/73 items (5.5%)
+
+---
+
+**Last Updated**: 29/01/2026  
+**Project Phase**: Phase 0 - Foundation & Setup
