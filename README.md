@@ -11,7 +11,7 @@ This project implements a skin lesion classifier with:
 - Deferral mechanism for high-uncertainty cases
 - Interactive Gradio demo
 
-**Status:** Phase 0 - Foundation & Setup (In Progress)
+**Status:** Phase 1 - Baseline Classifier (In Progress)
 
 ## Requirements
 
@@ -70,13 +70,13 @@ skin-cancer-uncertainty/
 
 ## Phases
 
-- [x] **Phase 0**: Foundation & Setup (26/01-01/02/2026)
-- [ ] **Phase 1**: Baseline Classifier (02/02-10/02/2026)
-- [ ] **Phase 2**: Monte Carlo Dropout (11/02-19/02/2026)
-- [ ] **Phase 3**: Deep Ensembles (20/02-28/02/2026)
-- [ ] **Phase 4**: Evidential Deep Learning (optional)
-- [ ] **Phase 5**: Deferral & Demo (01/03-07/03/2026)
-- [ ] **Phase 6**: Evaluation & Documentation (08/03-14/03/2026)
+- [x] **Phase 0**: Foundation & Setup
+- [ ] **Phase 1**: Baseline Classifier
+- [ ] **Phase 2**: Monte Carlo Dropout
+- [ ] **Phase 3**: Deep Ensembles
+- [ ] **Phase 4**: Evidential Deep Learning
+- [ ] **Phase 5**: Deferral & Demo
+- [ ] **Phase 6**: Evaluation & Documentation
 
 ## Regulatory Context
 
